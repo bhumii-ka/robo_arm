@@ -25,11 +25,11 @@
             </geometry>
         </collision>
     </link>
-    <link name="world"/>
+    <link name="world" />
     <joint name="world_joint" type="fixed">
-    	<origin xyz="0 0 0" rpy="0 0 0"/> 
-    	<parent link="world"/>
-    	<child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="world" />
+        <child link="base_link" />
     </joint>
     <link name="link_0">
         <inertial>
@@ -228,8 +228,9 @@
     </transmission>
     <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-	    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-	    <legacyModeNS>true</legacyModeNS>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            <legacyModeNS>true</legacyModeNS>
+            <robotNamespace>/</robotNamespace>
         </plugin>
     </gazebo>
 </robot>
